@@ -1,0 +1,15 @@
+@use '../../styles/colors';
+
+.containerLogoAndSearch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.containerSearch {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  color: colors.$background_default;
+}
