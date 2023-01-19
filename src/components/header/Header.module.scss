@@ -1,10 +1,11 @@
-@use '../../styles/colors.scss';
+@use '../../styles/colors';
 
 .containerLogoAndSearch {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  background-color: colors.$background_default;
 }
 
 .containerSearch {
