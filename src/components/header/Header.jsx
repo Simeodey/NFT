@@ -14,25 +14,23 @@ import Logo from '../logo/Logo';
 export default function Header() {
   return (
     <Container maxWidth='false' sx={{ backgroundColor: '#0c0c14' }}>
-      <Grid container alignItems='center' justifyContent='space-between'>
-        <Grid item className={classNames(styles.containerLogoAndSearch)}>
-          <Grid item>
-            <Logo />
-          </Grid>
-          <Grid item>
-            <Paper
-              component='form'
-              sx={{ backgroundColor: '#181828' }}
-              className={classNames(styles.containerSearch)}>
-              <InputBase
-                className={styles.searchElements}
-                placeholder='Find items, users and activities'
-              />
-              <IconButton type='button' aria-label='search'>
-                <SearchIcon className={styles.searchElements} />
-              </IconButton>
-            </Paper>
-          </Grid>
+      <Grid item className={classNames(styles.containerLogoAndSearch)}>
+        <Grid item>
+          <Logo />
+        </Grid>
+        <Grid item>
+          <Paper
+            component='form'
+            sx={{ backgroundColor: '#181828' }}
+            className={classNames(styles.containerSearch)}>
+            <InputBase
+              className={styles.searchElements}
+              placeholder='Find items, users and activities'
+            />
+            <IconButton type='button' aria-label='search'>
+              <SearchIcon className={styles.searchElements} />
+            </IconButton>
+          </Paper>
         </Grid>
         <Grid item>
           <Button className={styles.notSelectedButton}>Home</Button>
