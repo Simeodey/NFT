@@ -14,7 +14,7 @@ import Logo from '../logo/Logo';
 export default function Header() {
   return (
     <Container maxWidth='false' sx={{ backgroundColor: '#0c0c14' }}>
-      <Grid item className={classNames(styles.containerLogoAndSearch)}>
+      <Grid container className={classNames(styles.containerLogoAndSearch)}>
         <Grid item>
           <Logo />
         </Grid>
