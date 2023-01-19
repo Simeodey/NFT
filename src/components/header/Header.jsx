@@ -13,7 +13,7 @@ import Logo from '../logo/Logo';
 
 export default function Header() {
   return (
-    <Container maxWidth='false' sx={{ backgroundColor: '#0c0c14' }}>
+    <Container maxWidth='false'>
       <Grid container className={classNames(styles.containerLogoAndSearch)}>
         <Grid item>
           <Logo />
@@ -21,7 +21,6 @@ export default function Header() {
         <Grid item>
           <Paper
             component='form'
-            sx={{ backgroundColor: '#181828' }}
             className={classNames(styles.containerSearch)}>
             <InputBase
               className={classNames(styles.searchElements)}
