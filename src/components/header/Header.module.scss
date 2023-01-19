@@ -11,5 +11,14 @@
   display: flex;
   width: 400px;
   justify-content: space-between;
-  color: colors.$background_default;
+  background-color: colors.$background_paper !important;
+}
+
+.searchElements {
+  padding: 1px !important;
+  color: colors.$text_secondary !important;
+}
+
+.notSelectedButton {
+  color: colors.$text_primary !important;
 }
