@@ -24,11 +24,11 @@ export default function Header() {
             sx={{ backgroundColor: '#181828' }}
             className={classNames(styles.containerSearch)}>
             <InputBase
-              className={styles.searchElements}
+              className={classNames(styles.searchElements)}
               placeholder='Find items, users and activities'
             />
             <IconButton type='button' aria-label='search'>
-              <SearchIcon className={styles.searchElements} />
+              <SearchIcon className={classNames(styles.searchElements)} />
             </IconButton>
           </Paper>
         </Grid>
