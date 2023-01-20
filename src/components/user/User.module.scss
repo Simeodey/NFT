@@ -1,0 +1,23 @@
+@use "../../styles/colors";
+
+.user {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.userTextContainer {
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  color: colors.$text_primary;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.info {
+  color: colors.$success_main;
+  font-weight: 700;
+  line-height: 0.5;
+}
