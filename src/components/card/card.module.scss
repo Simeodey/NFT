@@ -1,0 +1,33 @@
+@use "../../styles/colors";
+
+.card {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.badge {
+  position: absolute;
+  top: 20%;
+  left: 9%;
+  display: flex;
+  align-items: center;
+  background-color: colors.$secondary_main;
+  border-radius: 7px;
+  height: 18px;
+}
+
+.timer {
+  position: absolute;
+  left: 4.9%;
+  bottom: 18%;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 22px;
+  color: #181828;
+  text-align: center;
+  border-radius: 0 0 15px 15px;
+  background-color: colors.$secondary_main;
+  width: 90%;
+}
