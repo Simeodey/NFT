@@ -1,0 +1,22 @@
+@use "../../styles/colors";
+
+.containerFooter {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: colors.$background_default;
+}
+
+.textFooter {
+  color: colors.$text_secondary;
+}
+
+.notSelectedButton {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: colors.$text_hint;
+}
