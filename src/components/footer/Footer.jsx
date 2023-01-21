@@ -1,14 +1,6 @@
-import {
-  Grid,
-  Container,
-  InputBase,
-  IconButton,
-  Paper,
-  Button,
-} from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
+import { Grid, Container, Button } from '@mui/material';
 import classNames from 'classnames';
-import styles from './Header.module.scss';
+import styles from './Footer.module.scss';
 import Logo from '../logo/Logo';
 
 export default function Footer() {
