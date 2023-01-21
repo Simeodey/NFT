@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import styles from './AuSctions.module.scss';
+import styles from './Auctions.module.scss';
 
 import { Select, Grid, MenuItem, Box, Container } from '@mui/material';
 import Card from '../card/Card';
