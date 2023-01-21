@@ -1,0 +1,13 @@
+@use "../../styles/colors";
+
+.header {
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 20px;
+  color: colors.$text_primary;
+}
+
+.wrapper {
+  padding: 100px;
+  background-color: colors.$primary_main;
+}
