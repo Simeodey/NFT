@@ -80,8 +80,10 @@ export default function Card({
         }}
       >
         <div>
-          <h3>{name}</h3>
-          <span>{`${price} ${currency}`}</span>
+          <h3 className={classNames(styles.title)}>{name}</h3>
+          <span
+            className={classNames(styles.price)}
+          >{`${price} ${currency}`}</span>
         </div>
         <Button
           sx={{
@@ -93,6 +95,7 @@ export default function Card({
           }}
           variant="outlined"
           startIcon={<Favorite />}
+          className={classNames(styles.likes)}
         >
           {millify(likes)}
         </Button>
