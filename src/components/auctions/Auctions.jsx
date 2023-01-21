@@ -5,7 +5,7 @@ import styles from './AuSctions.module.scss';
 import { Select, Grid, MenuItem, Box, Container } from '@mui/material';
 import Card from '../card/Card';
 
-export default function Trending({ cards = [] }) {
+export default function Auctions({ cards = [] }) {
   return (
     <div className={classNames(styles.wrapper)}>
       <Container maxWidth="lg">
