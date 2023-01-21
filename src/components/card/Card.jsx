@@ -15,7 +15,19 @@ import Avatar from '../avatar/Avatar';
 
 import styles from './Card.module.scss';
 import classNames from 'classnames';
+import Countdown from 'react-countdown';
 
+const renderer = ({ hours, minutes, seconds, completed }) => {
+  if (completed) {
+    return null;
+  } else {
+    return (
+      <span>
+        {hours}:{minutes}:{seconds}
+      </span>
+    );
+  }
+};
 export default function Card({
   name = '',
   likes = 0,
@@ -23,33 +35,12 @@ export default function Card({
   user = { avatar: { url: '' }, verified: false },
   price = '',
   currency = '',
-  timeLeft = 0,
+  timeLeft = 10000,
 }) {
-  const [time, setTime] = useState(1000);
-
-  useEffect(() => {
-    let interval;
-    if (time) {
-      interval = setInterval(() => {
-        setTime((state) => state - 1);
-      }, 1000);
-    }
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const getReturnValues = useCallback((countDown) => {
-    const days = Math.floor(countDown / (60 * 60 * 24));
-    const hours = Math.floor((countDown % (60 * 60 * 24)) / (60 * 60));
-    const minutes = Math.floor((countDown % (60 * 60)) / 60);
-    const seconds = countDown % 60;
-    return [days, hours, minutes, seconds];
-  }, []);
-
   return (
     <MUICard sx={{ maxWidth: 300 }} className={classNames(styles.card)}>
       <CardHeader avatar={<Avatar size={33} verified={true} />} />
-      {!!time && (
+      {!!timeLeft && (
         <div className={classNames(styles.badge)}>
           <CircleIcon
             sx={{
@@ -68,9 +59,12 @@ export default function Card({
         alt=""
         height={300}
       />
-      {!!time && (
+      {!!timeLeft && (
         <div className={classNames(styles.timer)}>
-          {getReturnValues(time).join(' : ')}
+          <Countdown
+            date={Date.now() + timeLeft}
+            renderer={renderer}
+          ></Countdown>
         </div>
       )}
       <CardContent
